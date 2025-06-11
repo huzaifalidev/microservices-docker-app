@@ -1,0 +1,18 @@
+🧠 Creative Enhancement: Simulated Load Balancing
+
+To showcase Docker’s real-world capabilities, I implemented a creative enhancement by simulating load balancing. This was achieved by manually running a second instance of the frontend container on a different port, using Docker’s custom bridge network. Both containers were connected to the same Docker network (`app-network`), allowing them to operate independently while serving the same frontend application.
+
+Command used:
+docker run -d --name frontend-container-2 --network app-network -p 3001:3000 taskmate-frontend
+
+This approach demonstrates how microservices can scale horizontally by running multiple instances — a common strategy in high-availability systems. While an actual load balancer like NGINX wasn't used, this setup mimics the core concept and can be expanded further.
+
+📝 Reflection
+
+Working on TaskMate helped me understand the power of Docker in managing microservices efficiently. The idea was inspired by the need for a clean, admin-focused task management tool that reflects modern architectural practices. Simulating load balancing added a creative twist, showing how Docker enables horizontal scaling through multiple container instances.
+
+One of the key challenges was managing the microservices architecture without Docker Compose. I had to manually handle container creation, networking, and port configurations. Creating a shared Docker network and ensuring smooth communication between services required attention to detail. Additionally, tagging and pushing Docker images to Docker Hub taught me about image naming conventions and credential handling.
+
+Docker’s features, such as multi-stage builds, helped reduce frontend image size by separating build and runtime stages. Docker networking made inter-container communication straightforward. Although volumes were not heavily used in this version, they present a clear path for future data persistence.
+
+In a production environment, this application could be improved by integrating a proper load balancer (e.g., NGINX), implementing health checks, securing environment variables, and using Docker Compose or Kubernetes for orchestration. Adding centralized logging and monitoring would also enhance reliability and maintainability.

@@ -5,9 +5,9 @@ import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { showSuccessToast, showErrorToast } from "@/components/toasts";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setAdmin } from "@/redux/slices/admin";
-import { startLoading, setLoading, stopLoading } from "@/redux/slices/loading";
+import { startLoading, stopLoading } from "@/redux/slices/loading";
 import { useNavigate } from "react-router-dom";
 
 const validationSchema = Yup.object().shape({

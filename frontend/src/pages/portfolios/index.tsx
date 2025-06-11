@@ -74,8 +74,8 @@ const PortfolioPage: React.FC = () => {
   const [sortOrder, setSortOrder] = useState("");
   const [dateOrder, setDateOrder] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [carouselItems, setCarouselItems] = useState<string[]>([]);
-  const [selectedImage, setSelectedImage] = useState<string>("");
+  const [, setCarouselItems] = useState<string[]>([]);
+  const [, setSelectedImage] = useState<string>("");
   const [profile, setProfile] = useState<any>(null);
   const dispatch = useDispatch();
   const showDrawer = (task: any) => {

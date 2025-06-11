@@ -1,5 +1,5 @@
 const Admin = require("../Models/Admin");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const nodemailer = require("nodemailer");
 const crypto = require("crypto");
 const Portfolio = require("../Models/Portfolio");

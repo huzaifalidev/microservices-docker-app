@@ -74,8 +74,8 @@ const TaskPage: React.FC = () => {
   const [sortOrder, setSortOrder] = useState("");
   const [dateOrder, setDateOrder] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [carouselItems, setCarouselItems] = useState<string[]>([]);
-  const [selectedImage, setSelectedImage] = useState<string>("");
+  const [, setCarouselItems] = useState<string[]>([]);
+  const [, setSelectedImage] = useState<string>("");
   const showDrawer = (task: any) => {
     setSelectedTask(task);
     setOpen(true);

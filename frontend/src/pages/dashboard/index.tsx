@@ -4,20 +4,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import {
-  Bell,
-  Search,
-  Users,
   CheckSquare,
   Briefcase,
-  FileText,
   TrendingUp,
   Calendar,
   Phone,
   Mail,
-  MapPin,
   Clock,
-  User,
   UsersRound,
+  Users,
 } from "lucide-react"
 import { TaskStatusChart } from "@/components/ui/task-status-chart"
 import { TasksByDayChart } from "@/components/ui/reports-generated-chart"
@@ -78,10 +73,10 @@ export default function Dashboard() {
       createdAt: string;
     }[];
     taskStatus: {
-      inProgress: number;
-      approved: number;
-      pending: number;
-      completed: number;
+      "in-progress": number;
+      "approved": number;
+      "pending": number;
+      "completed": number;
     };
   }
   const [details, setDetails] = useState<DashboardDetails | null>(null);

@@ -1,6 +1,5 @@
 import React from "react";
 import { Carousel } from "antd";
-import type { CarouselProps } from "antd";
 
 type GlobalCarouselProps = {
   items: React.ReactNode[];
