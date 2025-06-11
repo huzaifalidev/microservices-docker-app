@@ -73,11 +73,7 @@ cd frontend
 npm install
 npm run dev
 
-<<<<<<< HEAD
-
-=======
 🐳 Dockerfile - Frontend
->>>>>>> 6c1a4b970164c6bcfad8da8ffa7381c8c92b7214
 
 # Stage 1 - Build
 FROM node:22-alpine AS builder
@@ -100,26 +96,11 @@ EXPOSE 3000
 
 CMD ["serve", "-s", "dist", "-l", "3000"]
 
-<<<<<<< HEAD
-
-# Use official Node.js image
-=======
 🐳 Dockerfile - Backend
->>>>>>> 6c1a4b970164c6bcfad8da8ffa7381c8c92b7214
 FROM node:22
 
 WORKDIR /app
 
-<<<<<<< HEAD
-# Copy only package.json and install inside container
-COPY package*.json ./
-RUN npm install
-
-# Now copy the rest of your backend code
-COPY . .
-
-# Optional: Expose port (if using localhost testing)
-=======
 # Install dependencies
 COPY package*.json ./
 RUN npm install
@@ -127,34 +108,11 @@ RUN npm install
 # Copy source code
 COPY . .
 
->>>>>>> 6c1a4b970164c6bcfad8da8ffa7381c8c92b7214
 EXPOSE 5001
 
 CMD ["node", "server.js"]
 
 
-<<<<<<< HEAD
-
-## Creative Feature: Simulated Load Balancing
-
-To showcase Docker's flexibility and scalability, we implemented a simulated load balancing feature by running multiple frontend containers on different ports.
-
-### Purpose:
-This demonstrates how microservices can scale horizontally by adding more instances, which is a common practice in production systems to handle increased traffic and ensure high availability.
-
-### How It Was Implemented:
-We used Docker's networking to run a second instance of the frontend service:
-
-```bash
-docker run -d \
-  --name frontend-container-2 \
-  --network app-network \
-  -p 3001:3000 \
-  taskmate-frontend
-
-
-  docker pull huzaifali48/taskmate-backend:v1
-=======
 # Build the frontend image
 docker build -t taskmate-frontend ./frontend
 
@@ -223,5 +181,4 @@ This simulates a real-world load-balanced environment. You can later integrate a
 To pull the prebuilt Docker images:
 
 docker pull huzaifali48/taskmate-backend:v1
->>>>>>> 6c1a4b970164c6bcfad8da8ffa7381c8c92b7214
 docker pull huzaifali48/taskmate-frontend:v1
