@@ -112,6 +112,51 @@ EXPOSE 5001
 
 CMD ["node", "server.js"]
 
+
+# Build the frontend image
+docker build -t taskmate-frontend ./frontend
+
+# Build the backend image
+docker build -t taskmate-backend ./backend
+
+# Docker Images
+docker images
+
+# Create Docker Network
+docker network create app-network
+
+# Run Containers
+docker run -d --name frontend-container -p 3000:3000 taskmate-frontend
+docker run -d --name backend-container -p 5001:5001 taskmate-backend
+
+# Docker Containers
+docker containers
+
+#Docker All Containers
+docker ps -a
+
+# Docker Hub Authentication
+docker login
+
+# Tag Images for Docker Hub
+# Tag the frontend image
+docker tag taskmate-frontend huzaifali48/taskmate-frontend:v1
+
+# Tag the backend image
+docker tag taskmate-backend huzaifali48/taskmate-backend:v1
+
+# Push Images to Docker Hub
+docker push huzaifali48/taskmate-frontend:v1
+docker push huzaifali48/taskmate-backend:v1
+
+# Docker Logs
+docker logs backend-container
+docker logs frontend-container
+
+# Docker Stop & Remove Containers 
+docker stop frontend-container frontend-container-2 backend-container
+docker rm frontend-container frontend-container-2 backend-container
+
 🚀 Creative Feature: Simulated Load Balancing
 To showcase Docker's flexibility and scalability, we implemented a simulated load balancing feature by running multiple frontend containers on different ports.
 
