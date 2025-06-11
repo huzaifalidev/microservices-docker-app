@@ -1,4 +1,4 @@
-# 🧩 TaskMate – Microservices-Based Task Management System
+![1](https://github.com/user-attachments/assets/efb5e249-e209-49a0-886b-90243035b7bb)# 🧩 TaskMate – Microservices-Based Task Management System
 
 **TaskMate** is a modern, microservices-based task management application designed to streamline project and task handling. The application is divided into two main services:
 
@@ -59,6 +59,7 @@ microservices-docker-app/
 │ └── Dockerfile
 
 ---
+![1](https://github.com/user-attachments/assets/22a76e3c-e285-4852-8516-4ff15ceb8c51)
 
 ## ⚙️ Setup Instructions (Without Docker)
 
